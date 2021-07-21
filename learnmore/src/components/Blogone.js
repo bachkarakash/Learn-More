@@ -12,7 +12,13 @@ const Blogone = () => {
               <div className="blogoneMeta">
                 <span className="blogoneTitle">Some Title</span>
                 {/* <span className="blogCourse">Some Course</span> */}
+                <div className="blogIcon">
+                <i className="updateIcon fa fa-edit"></i>
+                <i className="deleteIcon fa fa-trash"></i>
+                </div>
+                
               </div>
+              {/* <span>Author</span> */}
               <p className="blogoneContent">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
