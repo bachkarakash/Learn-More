@@ -1,12 +1,11 @@
 export const courses = [
-    "Data Structures", "Algorithms", "System Design", "Fundamentals"
+    "Data Structures", "Algorithms", "System Design"
 ]
 
 export const courseMapping = {
     "datastructures": "Data Structures",
     "algorithms": "Algorithms",
-    "systemdesign": "System Design",
-    "fundamentals": "Fundamentals"
+    "systemdesign": "System Design"
 }
 
 export const topics = [
@@ -36,11 +35,11 @@ export const topics = [
     },
     {
         name: "Design Pattern",
-        course: "Fundamentals"
+        course: "System Design"
     },
     {
         name: "SOLID Principles",
-        course: "Fundamentals"
+        course: "System Design"
     }
 ]
 
@@ -74,7 +73,7 @@ export const contents = [
     },
     {
         text: "Some different text on hasmap",
-        subtopic: "Hashmap",
+        subtopic: "Hashmap 2",
         topic: "Hashmap",
         course: "Data Structures",
         user: "Akash"
@@ -83,7 +82,14 @@ export const contents = [
         text: "Some text on KMP algorithm",
         subtopic: "KMP",
         topic: "String",
-        course: "Algorithm",
+        course: "Algorithms",
+        user: "Akash 2"
+    },
+    {
+        text: "Some more text on KMP algorithm",
+        subtopic: "KMP 2",
+        topic: "String",
+        course: "Algorithms",
         user: "Akash 2"
     }
 ]

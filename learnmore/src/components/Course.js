@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import Box from '@material-ui/core/Box';
-import Sidebar from './Sidebar';
+
 import Grid from '@material-ui/core/Grid';
-import Divider from './Divider';
+
 import { Paper } from '@material-ui/core';
 import { Router, Route, Link, Switch, useHistory, useLocation } from 'react-router-dom';
 
 import { Component, Fragment } from 'react';
 
-import { courses, topics, subtopics, contents } from '../data/Data';
+import { courses, topics, subtopics, contents, courseMapping } from '../data/Data';
 import { flexbox } from '@material-ui/system';
 import Content from './Content';
 
@@ -24,7 +24,7 @@ const getTopics = (course) => {
     return entries;
 }
 
-const Datastructure = (props) => {
+const Course = (props) => {
 
     let history = useHistory();
     
@@ -65,5 +65,5 @@ const Datastructure = (props) => {
     );
 }
 
-export default Datastructure;
+export default Course;
 

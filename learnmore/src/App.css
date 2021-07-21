@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .App-logo {
@@ -37,13 +38,22 @@
   }
 }
 :root {
-  --primaryColor: rgb(138, 75, 175);
-  --secondaryColor: rgb(157, 122, 173);
+  /* --primaryColor: rgb(138, 75, 175); */
+  --primaryColor: #3f51b5;
+  /* --secondaryColor: rgb(157, 122, 173); */
+  --secondaryColor: #7c85bd;
   --primaryBrand: white;
 }
 #appNavbar {
   background-color: var(--primaryColor) !important;
   color: var(--primaryBrand) !important;
+}
+
+.headerBar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; 
+  z-index: 100;
 }
 
 .nav-link {
@@ -79,4 +89,62 @@
 a:-webkit-any-link {
   text-decoration: none;
   color: inherit;
+}
+
+.landingPage {
+  margin: 2%;
+
+}
+
+.blogImage {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.blogGrid {
+  border-radius: 10px;
+  margin: 2%;
+}
+
+.blogMeta {
+  display: flex;
+}
+
+.blogTitle {
+  font-size: 25px;
+  color: var(--primaryColor);
+}
+
+.blogContent {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.blogoneGrid {
+  border-radius: 10px;
+  margin: 2%;
+}
+
+.blogoneImage {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.blogoneMeta {
+  display: flex;
+}
+
+.blogoneTitle {
+  font-size: 25px;
+  color: var(--primaryColor);
+}
+
+.blogoneContent {
+  font-size: 15px;
 }

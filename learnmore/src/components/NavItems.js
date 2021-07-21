@@ -5,7 +5,7 @@ const Navitems = [
     },
     {
         name: "Data Structures",
-        path: "/datastructres"
+        path: "/datastructures"
     },
     {
         name: "Algorithms",
@@ -14,10 +14,6 @@ const Navitems = [
     {
         name: "System Design",
         path: "/systemdesign"
-    },
-    {
-        name: "Fundamentals",
-        path: "/fundamentals"
     }
 ]
 

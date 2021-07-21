@@ -1,26 +1,19 @@
-import React from 'react';
-import { Route, Router, Switch, Redirect } from 'react-router-dom';
-
-import './App.css';
-import Navbar from './components/Navbar';
-import Landingpage from './components/Landingpage';
-import Course from './components/Course';
-import Algorithms from './components/Algorithms';
-import SystemDesign from './components/Systemdesign';
+import React from 'react'
+import { Route, Router, Switch } from 'react-router-dom';
+import Landingpage from '../components/Landingpage';
+import Datastructres from '../components/Course';
+import Course from '../components/Course';
 
 
-import Content from './components/Content'
-import Subtopic from './components/Subtopic';
 
+import Content from '../components/Content';
+import Subtopic from '../components/Subtopic';
 
-const App = () => {
+const AppRoutes = () => {
   return (
-    <div>
-      <Navbar />
-    
-      <Switch>
+    <>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Landingpage />
         </Route>
 
         <Route exact path="/home">
@@ -35,7 +28,8 @@ const App = () => {
         render={props => (
           <Subtopic {...props} title={`Props`} message="from Data Structure" />
         )}/>
-         
+          {/* <Content message="from Data Structure" />
+        </Route> */}
 
         <Route path="/datastructures">
           <Course message="Data Structures" pathname="/datastructres"/>
@@ -50,14 +44,10 @@ const App = () => {
         </Route>
 
         <Route path="/systemdesign">
-          <Course message="System Design" />
+          <Course />
         </Route>
-
-      </Switch>
-
-
-    </div>
+    </>
   )
 }
 
-export default App
+export default AppRoutes
