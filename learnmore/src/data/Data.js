@@ -2,6 +2,30 @@ export const courses = [
     "Data Structures", "Algorithms", "System Design"
 ]
 
+export const blogPosts = []
+
+export const blogs = [
+    {
+        title: "Array",
+        course: "Data Structures",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    {
+        title: "String",
+        course: "Data Structures",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    {
+        title: "Kadane",
+        course: "Algorithms",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    {
+        title: "Array",
+        course: "Algorithms",
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    }
+]
 export const courseMapping = {
     "datastructures": "Data Structures",
     "algorithms": "Algorithms",

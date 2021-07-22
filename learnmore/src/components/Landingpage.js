@@ -1,12 +1,13 @@
 import React from 'react'
 import Blog from './Blog'
 import Blogone from './Blogone'
+import Addblog from './Addblog';
 
 const Landingpage = () => {
   return (
     <div className="landingPage">
-      {/* <Blog /> */}
-      <Blogone />
+      <Blog  course="Data Structures"/>
+      {/* <Addblog /> */}
     </div>
   )
 }

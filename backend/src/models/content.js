@@ -5,9 +5,13 @@ const contentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    subtopicId: {
+    title: {
+        type: String,
+        required: true
+    },
+    courseId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'subtopic',
+        ref: 'course',
         required: true
     },
     userId: {
@@ -15,7 +19,7 @@ const contentSchema = new mongoose.Schema({
         ref: 'user',
         required: true
     }
-});
+}, { timestamps: true });
 
 const Content = mongoose.model('content', contentSchema);
 
