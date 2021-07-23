@@ -14,7 +14,9 @@ import Subtopic from './components/Subtopic';
 import Blogone from './components/Blogone'
 import Addblog from './components/Addblog'
 import Blog from './components/Blog'
-
+import CreateBlog from './components/CreateBlog'
+import BlogLists from './components/BlogLists'
+import Login from './components/Login'
 
 const App = () => {
   return (
@@ -40,15 +42,20 @@ const App = () => {
         </Route>
 
         <Route path="/blogs/:courseId">
-          <Blog />
+          <BlogLists />
         </Route>
 
         <Route path="/blogs">
-          <Blog />
+          {/* <Blog /> */}
+          <BlogLists />
         </Route>
 
         <Route path="/addBlog">
           <Addblog />
+        </Route>
+
+        <Route path="/createBlog">
+          <CreateBlog />
         </Route>
 
         {/* <Route path="/blogs">
@@ -63,6 +70,10 @@ const App = () => {
 
         <Route path="/datastructures">
           <Course message="Data Structures" pathname="/datastructres" />
+        </Route>
+
+        <Route path="/login">
+          <Login />
         </Route>
 
 

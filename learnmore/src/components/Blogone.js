@@ -52,7 +52,8 @@ const Blogone = () => {
                                 </div>
                                 {/* <span>Author</span> */}
                                 <p className="blogoneContent">
-                                    {blog.content}
+                                    {/* {blog.content} */}
+                                    <div dangerouslySetInnerHTML={{ __html: blog.content }} />
                                 </p>
                             </div>
                         </div>

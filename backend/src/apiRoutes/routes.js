@@ -6,12 +6,35 @@ const User = require('../models/user')
 const Content = require('../models/content');
 const Subtopic = require('../models/subtopic');
 const bcryptjs = require('bcryptjs');
+const multer = require("multer");
+
+
+let storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./uploads");
+        console.log("in storage dest");
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}_${file.originalname}`);
+    },
+    fileFilter: (req, file, cb) => {
+        const ext = path.extname(file.originalname)
+        if (ext !== '.jpg' && ext !== '.png' && ext !== '.mp4') {
+            return cb(res.status(400).end('only jpg, png, mp4 is allowed'), false);
+        }
+        cb(null, true)
+    }
+});
+
+const upload = multer({ storage: storage }).single("file");
 
 const router = express.Router();
 
 router.get('/', (request, response) => {
     response.send("Router Test")
 });
+
+
 
 router.post('/user/register', async (request, response) => {
     console.log(request.body);
@@ -61,10 +84,10 @@ router.post('/user/login', async (request, response) => {
                 expires: new Date(Date.now() + 86400000),
                 httpOnly: true
             })
-            return response.json({ message: "Logged in.." })
+            return response.status(200).json({ message: "Logged in.." })
         }
         else {
-            return response.json({ message: "Login error" });
+            return response.status(203).json({ message: "Login error" });
         }
     }
     catch (error) {
@@ -103,6 +126,16 @@ router.get('/user/get', async (request, response) => {
         return response.json(error);
     }
 
+});
+
+router.post("/uploadfiles", (req, res) => {
+    // console.log("inside backend upload", req);
+    upload(req, res, err => {
+        if (err) {
+            return res.json({ success: false, err });
+        }
+        return res.json({ success: true, url: res.req.file.path, fileName: res.req.file.filename });
+    });
 });
 
 router.post('/addContent', async (request, response) => {
